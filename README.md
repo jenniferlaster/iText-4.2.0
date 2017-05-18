@@ -33,10 +33,4 @@ ant jar.rups
 ant jar.rtf
 ```
 
-## Maintaining binary compatability with iText 5+ ##
-
-Additionally, version 5.0 breaks binary compatibility by changing package names from ``com.lowagie`` to ``com.itextpdf``.
-To offer compatibility with compatibly-licensed code targeting 5.0, I've also produced a jar of 4.2.0 using ``com.itextpdf``.
-See the [Downloads tab](https://github.com/ymasory/iText-4.2.0/downloads).
-You can find the source in the [``com.itextpdf``](https://github.com/ymasory/iText-4.2.0/tree/com.itextpdf) branch of the repository.
-You can compile with the instructions above.
+Based off of ymasory iText-4.2.0 (https://github.com/ymasory/iText-4.2.0/tree/com.itextpdf) Original iText is a Java PDF library originally dual licensed under MPL/LGPL Licensed. Modifications made by InfluenceHealth (http://installer.medseek.com/itext)

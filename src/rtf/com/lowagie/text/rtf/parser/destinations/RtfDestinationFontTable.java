@@ -591,13 +591,15 @@ public final class RtfDestinationFontTable extends RtfDestination {
 				|| operatingSystem.indexOf("windows 98") > -1
 				|| operatingSystem.indexOf("me") > -1) {
 			process = runtime.exec("command.com /c set");
-		} else if ((operatingSystem.indexOf("nt") > -1)
-				|| (operatingSystem.indexOf("windows 2000") > -1)
-				|| (operatingSystem.indexOf("windows xp") > -1)
-				|| (operatingSystem.indexOf("windows 2003") > -1)
-				|| (operatingSystem.indexOf("windows vista") > -1)) {
+		} else if ((operatingSystem.indexOf("nt") > -1) || (operatingSystem.indexOf("windows 2000") > -1) || (operatingSystem.indexOf("windows xp") > -1)
+				|| (operatingSystem.indexOf("windows 2003") > -1) || (operatingSystem.indexOf("windows vista") > -1) || (operatingSystem.indexOf(
+						"windows server") > -1) || (operatingSystem.indexOf("Windows Server") > -1) || (operatingSystem.indexOf("windows 7") > -1) || (operatingSystem
+							.indexOf("windows 8") > -1) || (operatingSystem.indexOf("windows 10") > -1) || (operatingSystem.indexOf("windows vista") > -1))
+		{
 			process = runtime.exec("cmd.exe /c set");
-		} else {
+		}
+		else
+		{
 			process = runtime.exec("env");
 		}
 		BufferedReader environmentStream = new BufferedReader(new InputStreamReader(process.getInputStream()));
